@@ -1,0 +1,60 @@
+html{
+    background-color: #0E185F;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+}
+.container-title{
+    padding-left: 2rem;
+    background-color: #2FA4FF;
+    /*background-image: url();*/
+}
+table,th,td{
+    border: 2px solid #2FA4FF;
+    border-collapse: collapse;
+}
+.table{
+    background-color: #E8FFC2;
+    height: 100%;
+    margin-left: 0.5rem;
+    text-align: center;
+}
+.table-container{
+    height: 95%;
+    display:grid;
+    grid-template-rows: auto;
+    row-gap: 4rem;
+}
+.geo-data{
+    margin: auto;
+    width: 50%;
+}
+.time-data{
+    width: 50%;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 25% 74%;
+    column-gap: 0.5rem;
+    align-items: center;
+    background-color: #00FFDD;
+}
+.map-container{
+    height: 30rem;
+}
+#map{
+    height: 100%;
+    width: 100%;
+}
+.table-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 0.5rem;
+}
+.authors{
+    margin-top: 10px;
+}
+.footer{
+    height: 3rem;
+    padding-left: 3rem;
+    background-color:#2FA4FF ;
+}

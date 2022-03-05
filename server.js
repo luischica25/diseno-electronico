@@ -10,10 +10,13 @@ DBConfig = {
 }
 
 const connection = mysql.createConnection(DBConfig)
-
 connection.connect((error)=>{
-    if(error)throw error
+    if(error){
+        console.log(error)
+        connection.end()}
+    
 })
+
 
 
 let server = new dgram.createSocket('udp4')
@@ -57,12 +60,13 @@ app.get('/data',async (req,res)=>{
             }
         })
     })
-
     console.log(response);
     res.status(200).json({
         response
     })
 }) 
-app.get('/',(req,res)=>{  
-    res.sendFile(__dirname+'/view/index.html')
+
+app.get('/',(req,res)=>{
+    path = __dirname+'/view'
+    res.sendFile(path+'/index.html')
 })
