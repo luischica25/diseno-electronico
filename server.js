@@ -3,10 +3,11 @@ const dgram = require('dgram')
 const express = require('express')
 const app = express()
 DBConfig = {
-    host: 'localhost',
+    host: 'disenoelectronico.cc3xavelbops.us-east-1.rds.amazonaws.com',
     port: '3306',
-    user: 'root',
-    database:'basededatos'
+    user: 'admin',
+    password:"disenoelectronico",
+    database:'diseno-electronico'
 }
 
 const connection = mysql.createConnection(DBConfig)
@@ -31,8 +32,8 @@ server.on('message',(msg,msgInfo)=>{
    
     if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3]){
         lat = msgSplited[0], long = msgSplited[1], fecha = msgSplited[2], hora = msgSplited[3]
-        query = `INSERT INTO basededatos (Latitud,Longitud,Fecha,Hora)
-        VALUES('${lat}','${long}','${fecha}','${hora}') `
+        query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,fecha,hora)
+        VALUES(UUID(),'${lat}','${long}','${fecha}','${hora}') `
         connection.query(query,(e,d)=>{
             if(e)throw e
         })
@@ -46,10 +47,10 @@ server.bind(40001)
 app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 40001')})
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
-    query = `SELECT * 
-    FROM basededatos
-    ORDER BY id
-    DESC 
+    query = `SELECT latitud,longitud,fecha,hora
+    FROM geolocalizacion
+    ORDER BY fecha,hora
+    DESC
     LIMIT 1`
     var response = new Array()
     response = await new Promise((resolve,reject)=>{
@@ -60,7 +61,6 @@ app.get('/data',async (req,res)=>{
             }
         })
     })
-    console.log(response);
     res.status(200).json({
         response
     })
