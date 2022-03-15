@@ -27,6 +27,7 @@ server.on('error',(error)=>{
 var lat,long,fecha,hora
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
+    console.log(msg)
 
     msgSplited = msg.split(' ')
    
