@@ -27,7 +27,6 @@ server.on('error',(error)=>{
 var lat,long,fecha,hora
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
-
     msgSplited = msg.split(' ')
    
     if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3]){
@@ -49,7 +48,7 @@ app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
     query = `SELECT latitud,longitud,fecha,hora
     FROM geolocalizacion
-    ORDER BY fecha,hora
+    ORDER BY CONCAT(fecha,hora)
     DESC
     LIMIT 1`
     var response = new Array()
