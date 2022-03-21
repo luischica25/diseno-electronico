@@ -1,7 +1,14 @@
 const mysql = require('mysql')
 const dgram = require('dgram')
+var bodyParser = require('body-parser')
 const express = require('express')
-const app = express()
+var app = express()
+const moment = require('moment')
+var jsonParser = bodyParser.json()
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
+app.use(jsonParser)
+app.use(urlencodedParser)
+
 DBConfig = {
     host: 'disenoelectronico.cc3xavelbops.us-east-1.rds.amazonaws.com',
     port: '3306',
@@ -64,7 +71,27 @@ app.get('/data',async (req,res)=>{
         response
     })
 }) 
-
+app.post('/historicos', async(req,res)=>{
+    
+    let idate = req.body.finicial, fdate = req.body.ffinal
+    idate = new Date(idate), fdate = new Date(fdate)
+    idate = moment(idate).format('YYYY:MM:DD hh:mm:ss')
+    fdate = moment(fdate).format('YYYY:MM:DD hh:mm:ss')
+    query = `SELECT latitud,longitud,fecha,hora 
+    FROM geolocalizacion
+    WHERE CONCAT(fecha,' ',hora) < '${fdate}' AND CONCAT(fecha,' ',hora) > '${idate}'`
+    response = await new Promise((resolve,reject)=>{
+        connection.query(query,(e,d)=>{
+            if(e)throw e
+            else{
+                resolve(d)
+            }
+        })
+    })
+    res.status(200).json({
+        response
+    })
+})
 app.get('/',(req,res)=>{
     path = __dirname+'/view'
     res.sendFile(path+'/index.html')

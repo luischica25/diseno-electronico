@@ -6,6 +6,7 @@ html{
 .container-title{
     padding-left: 2rem;
     background-color: #2FA4FF;
+    height: 10rem;
     /*background-image: url();*/
 }
 table,th,td{
@@ -23,6 +24,8 @@ table,th,td{
     display:grid;
     grid-template-rows: auto;
     row-gap: 4rem;
+}
+.table-container-h{
 }
 .geo-data{
     margin: auto;
