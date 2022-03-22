@@ -9,7 +9,7 @@ setInterval(async ()=>{
     data = await getData();
     response = setDataIntDoc(data.response)
     let markerArray = new Array()
-    actualMarket = L.marker([response[0],response[1]], {draggable:true}).addTo(map)
+    actualMarket = L.marker([response[0],response[1]]).addTo(map)
     
 },1000)
 
