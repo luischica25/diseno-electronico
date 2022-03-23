@@ -1,3 +1,4 @@
+
 async function getData(){
     var data = await fetch('/data')
     if(!data.ok) throw data.status
@@ -14,13 +15,10 @@ setInterval(async ()=>{
 },1000)
 
 function setDataIntDoc(data){
-    var fecha = new Date(data.fecha)
-    var month = parseInt(fecha.getMonth()) + 1
-    var fechaFormateada = (fecha.getDate()+1)+'/'+month+'/'+(fecha.getYear()).toString().substring(1,fecha.getYear().length)+' '+data.hora
-
+    let timestamp = moment(data.timestamp).format('YYYY:MM:DD hh:mm:ss')
     document.getElementById('lat').innerHTML = data.latitud
     document.getElementById('long').innerHTML = data.longitud
-    document.getElementById('fecha').innerHTML = fechaFormateada
+    document.getElementById('fecha').innerHTML = timestamp
 
     return [data.latitud,data.longitud]
 }

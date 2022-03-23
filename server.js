@@ -5,6 +5,7 @@ var bodyParser = require('body-parser')
 const express = require('express')
 var app = express()
 const moment = require('moment')
+const { timeStamp } = require('console')
 var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: true })
 app.use(jsonParser)
@@ -36,11 +37,10 @@ var lat,long,fecha,hora
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
     msgSplited = msg.split(' ')
-   
     if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3]){
-        lat = msgSplited[0], long = msgSplited[1], fecha = msgSplited[2], hora = msgSplited[3]
-        query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,fecha,hora)
-        VALUES(UUID(),'${lat}','${long}','${fecha}','${hora}') `
+        lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2]+' '+msgSplited[3]
+        query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,timestamp)
+        VALUES(UUID(),'${lat}','${long}','${timestamp}') `
         connection.query(query,(e,d)=>{
             if(e)throw e
         })
@@ -54,9 +54,9 @@ server.bind(40001)
 app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 40001')})
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
-    query = `SELECT latitud,longitud,fecha,hora
+    query = `SELECT latitud,longitud,timestamp
     FROM geolocalizacion
-    ORDER BY CONCAT(fecha,hora)
+    ORDER BY timestamp
     DESC
     LIMIT 1`
     var response = new Array()
@@ -76,11 +76,11 @@ app.post('/historicos', async(req,res)=>{
     
     let idate = req.body.finicial, fdate = req.body.ffinal
     idate = new Date(idate), fdate = new Date(fdate)
-    idate = moment(idate).format('YYYY:MM:DD hh:mm:ss')
-    fdate = moment(fdate).format('YYYY:MM:DD hh:mm:ss')
-    query = `SELECT latitud,longitud,fecha,hora 
+    idate = moment(idate).format('YYYY:MM:DD HH:mm:ss')
+    fdate = moment(fdate).format('YYYY:MM:DD HH:mm:ss')
+    query = `SELECT latitud,longitud,timestamp
     FROM geolocalizacion
-    WHERE CONCAT(fecha,' ',hora) < '${fdate}' AND CONCAT(fecha,' ',hora) > '${idate}'`
+    WHERE timestamp BETWEEN '${idate}' AND '${fdate}'`
     response = await new Promise((resolve,reject)=>{
         connection.query(query,(e,d)=>{
             if(e)throw e
