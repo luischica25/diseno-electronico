@@ -15,7 +15,7 @@ setInterval(async ()=>{
 },1000)
 
 function setDataIntDoc(data){
-    let timestamp = moment(data.timestamp).utcOffset('+01:00').format('YYYY:MM:DD hh:mm:ss')
+    let timestamp = moment(data.timestamp).utcOffset('+00:00').format('YYYY:MM:DD hh:mm:ss')
     document.getElementById('lat').innerHTML = data.latitud
     document.getElementById('long').innerHTML = data.longitud
     document.getElementById('fecha').innerHTML = timestamp
