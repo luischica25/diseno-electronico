@@ -12,7 +12,7 @@ setInterval(async ()=>{
     let markerArray = new Array()
     actualMarket = L.marker([response[0],response[1]]).addTo(map)
     
-},1000)
+},4000)
 
 function setDataIntDoc(data){
     let timestamp = moment(data.timestamp).utcOffset('+00:00').format('YYYY:MM:DD hh:mm:ss')
