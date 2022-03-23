@@ -1,3 +1,4 @@
+
 const mysql = require('mysql')
 const dgram = require('dgram')
 var bodyParser = require('body-parser')
@@ -83,7 +84,7 @@ app.post('/historicos', async(req,res)=>{
     response = await new Promise((resolve,reject)=>{
         connection.query(query,(e,d)=>{
             if(e)throw e
-            else{
+            else{console.log(query,d)
                 resolve(d)
             }
         })
