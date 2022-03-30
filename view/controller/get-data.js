@@ -10,10 +10,11 @@ setInterval(async ()=>{
     data = await getData();
     response = setDataIntDoc(data.response)
     let markerArray = new Array()
-    if(marker!==undefined){
-        map.removeLayer(marker)
+    if(actualmarker!==undefined){
+        map.removeLayer(actualmarker)
     }
     actualMarket = L.marker([response[0],response[1]]).addTo(map)
+
     if(polyline!==undefined){
         map.removeLayer(polyline)
     }
