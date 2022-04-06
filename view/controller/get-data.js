@@ -1,4 +1,3 @@
-const { response } = require("express")
 
 var coordenadas = new Array()
 async function getData(){
@@ -8,24 +7,27 @@ async function getData(){
     return data
 }
 var latitud = 0 ,longitud = 0
+let markerArray = new Array()
 setInterval(async ()=>{
     data = await getData();
     response = setDataIntDoc(data.response)
     coordenadas.push(response)
-    let markerArray = new Array()
+    
     if(L.marker!==undefined){
         map.removeLayer(L.marker)
     }
-    actualMarket = L.marker([response[0],response[1]]).addTo(map)
-
-    if(L.polyline!==undefined){
-        map.removeLayer(L.polyline)
-    }
-    
+    const actualMarket = L.marker([response[0],response[1]]).addTo(map)
+    markerArray.push(actualMarket)
+    deleteMarkers(markerArray)
     var actualpolyline = L.polyline(coordenadas).addTo(map);
 
 },4000)
-
+function deleteMarkers (markers){
+    for (let index = 0; index < markers.length-1; index++) {
+        map.removeLayer(markers[index])
+    }
+    return markers = []
+}
 function setDataIntDoc(data){
     let timestamp = moment(data.timestamp).utcOffset('+00:00').format('YYYY:MM:DD hh:mm:ss')
     document.getElementById('lat').innerHTML = data.latitud

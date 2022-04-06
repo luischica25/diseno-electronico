@@ -1,3 +1,12 @@
+const range = document.querySelector('#range')
+var forRange = new Array()
+var markers = new Array()
+var poliArray = new Array()
+range.value = 0
+var coords = new Array()
+const histLat = document.querySelector('.latitud')
+const histLng = document.querySelector('.longitud')
+const histTs = document.querySelector('.timestamp')
 
 async function getHistorics(){
     let idate = document.getElementById('finicial').value
@@ -17,14 +26,45 @@ async function getHistorics(){
 }
 
 async function drawHistorics(){
+    deletePrev()
     data = await getHistorics()
+    console.log("data: ", data)
+    console.log("data: ", data.response)
     data = data.response
-    coords = new Array()
-     
-    for(coord of data){
-        L.marker([coord.latitud, coord.longitud]).addTo(map)
+    coords = []
+    forRange = []
+    poliArray = []
+    markers = []
+    
+    for(var coord of data){
+        var marker = L.marker([coord.latitud, coord.longitud]).addTo(map)
         coords.push([coord.latitud,coord.longitud])
-        
+        forRange.push(coord)
+        markers.push(marker)
     }
     var polyline = L.polyline(coords).addTo(map);
+    poliArray.push(polyline)
+    setRange()
+}
+
+function setRange(){
+    range.max = forRange.length
+    range.addEventListener('change', function(e){
+        const index = this.value
+        const data = forRange[index]
+
+        histLat.innerHTML = data.latitud
+        histLng.innerHTML = data.longitud
+        histTs.innerHTML = data.timestamp
+    })
+}
+
+function deletePrev(){
+    for(var marker of markers){
+        map.removeLayer(marker)
+    }
+
+    for(var poly of poliArray){
+        map.removeLayer(poly)
+    }
 }

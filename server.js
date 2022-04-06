@@ -36,6 +36,7 @@ server.on('error',(error)=>{
 var lat,long,fecha,hora
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
+    console.log(msg)
     msgSplited = msg.split(' ')
     if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3]){
         lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2]+' '+msgSplited[3]
@@ -84,7 +85,7 @@ app.post('/historicos', async(req,res)=>{
     response = await new Promise((resolve,reject)=>{
         connection.query(query,(e,d)=>{
             if(e)throw e
-            else{console.log(query,d)
+            else{
                 resolve(d)
             }
         })
