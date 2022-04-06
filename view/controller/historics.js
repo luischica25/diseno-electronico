@@ -44,8 +44,7 @@ async function drawHistorics(){
     }
     var polyline = L.polyline(coords).addTo(map);
     poliArray.push(polyline)
-    polyline= L.polyline(poliArray,{color:'red'})
-    setRange()
+        setRange()
 }
 
 function setRange(){
