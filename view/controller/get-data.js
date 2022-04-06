@@ -1,4 +1,6 @@
+const { response } = require("express")
 
+var coordenadas = new Array()
 async function getData(){
     var data = await fetch('/data')
     if(!data.ok) throw data.status
@@ -9,6 +11,7 @@ var latitud = 0 ,longitud = 0
 setInterval(async ()=>{
     data = await getData();
     response = setDataIntDoc(data.response)
+    coordenadas.push(response)
     let markerArray = new Array()
     if(L.marker!==undefined){
         map.removeLayer(L.marker)
@@ -18,7 +21,8 @@ setInterval(async ()=>{
     if(L.polyline!==undefined){
         map.removeLayer(L.polyline)
     }
-    var actualpolyline = L.polyline([response[0],response[1]]).addTo(map);
+    
+    var actualpolyline = L.polyline(coordenadas).addTo(map);
 
 },4000)
 

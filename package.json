@@ -1,7 +1,7 @@
 {
   "name": "diseno",
   "version": "1.0.0",
-  "description": "",
+  "description": ",# diseno-electronico",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -15,5 +15,14 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.15",
     "pm2": "^5.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luischica25/diseno-electronico.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luischica25/diseno-electronico/issues"
+  },
+  "homepage": "https://github.com/luischica25/diseno-electronico#readme"
 }
