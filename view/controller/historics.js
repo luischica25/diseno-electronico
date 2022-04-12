@@ -11,6 +11,8 @@ const histTs = document.querySelector('.timestamp')
 async function getHistorics(){
     let idate = document.getElementById('finicial').value
     let fdate = document.getElementById('ffinal').value
+    Swal.fire('La fecha Inicial no puede ser anterior a la inicial ')
+    
     var data = await fetch('/historicos',{
         headers:{
             "Content-Type": "application/json"
@@ -44,6 +46,8 @@ async function drawHistorics(){
     }
     var polyline = L.polyline(coords).addTo(map);
     poliArray.push(polyline)
+    polyline= L.polyline(poliArray,{color:'red'})
+    map.addLayer(PolyLine);
     setRange()
 }
 
