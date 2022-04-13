@@ -1,4 +1,5 @@
 
+
 const mysql = require('mysql')
 const dgram = require('dgram')
 var bodyParser = require('body-parser')
@@ -12,11 +13,11 @@ app.use(jsonParser)
 app.use(urlencodedParser)
 
 DBConfig = {
-    host: 'dbbyronnueva.cq1uih2wgpm9.us-east-1.rds.amazonaws.com',
+    host: 'dbbyron.cq1uih2wgpm9.us-east-1.rds.amazonaws.com',
     port: '3306',
     user: 'admin',
     password:"yonaciel100798",
-    database:'dbbyronnueva'
+    database:'diseno-electr'
 }
 
 const connection = mysql.createConnection(DBConfig)
@@ -36,7 +37,6 @@ server.on('error',(error)=>{
 var lat,long,fecha,hora
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
-    console.log(msg)
     msgSplited = msg.split(' ')
     if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3]){
         lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2]+' '+msgSplited[3]
@@ -50,9 +50,8 @@ server.on('message',(msg,msgInfo)=>{
     }
 
 })
-server.bind(30001)
+server.bind(40001)
 /**Servidor HTTP de solicitudes por parte de el frontend */
-
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
     query = `SELECT latitud,longitud,timestamp
@@ -85,7 +84,7 @@ app.post('/historicos', async(req,res)=>{
     response = await new Promise((resolve,reject)=>{
         connection.query(query,(e,d)=>{
             if(e)throw e
-            else{
+            else{console.log(query,d)
                 resolve(d)
             }
         })
@@ -99,8 +98,4 @@ app.get('/',(req,res)=>{
     res.sendFile(path+'/index.html')
 })
 
-
-
-
-
-app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 80')})
+app.listen(30001,()=>{console.log('escucha web:30001, escucha udp:40001')})

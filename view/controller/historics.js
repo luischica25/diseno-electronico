@@ -11,7 +11,7 @@ const histTs = document.querySelector('.timestamp')
 async function getHistorics(){
     let idate = document.getElementById('finicial').value
     let fdate = document.getElementById('ffinal').value
-    Swal.fire('La fecha Inicial no puede ser anterior a la inicial ')
+    
     
     var data = await fetch('/historicos',{
         headers:{
@@ -28,6 +28,9 @@ async function getHistorics(){
 }
 
 async function drawHistorics(){
+   if (finicial.valueOf() > ffinal.valueOf()){ 
+   window.alert('La fecha Final debe ser posterior a la Inicial');
+}
     deletePrev()
     data = await getHistorics()
     console.log("data: ", data)
@@ -72,3 +75,5 @@ function deletePrev(){
         map.removeLayer(poly)
     }
 }
+
+

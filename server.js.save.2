@@ -12,11 +12,11 @@ app.use(jsonParser)
 app.use(urlencodedParser)
 
 DBConfig = {
-    host: 'dbbyronnueva.cq1uih2wgpm9.us-east-1.rds.amazonaws.com',
+    host: '',
     port: '3306',
     user: 'admin',
-    password:"yonaciel100798",
-    database:'dbbyronnueva'
+    password:"disenoelectronico",
+    database:'diseno-electronico'
 }
 
 const connection = mysql.createConnection(DBConfig)
@@ -50,9 +50,8 @@ server.on('message',(msg,msgInfo)=>{
     }
 
 })
-server.bind(30001)
+server.bind(40001)
 /**Servidor HTTP de solicitudes por parte de el frontend */
-
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
     query = `SELECT latitud,longitud,timestamp
@@ -100,7 +99,4 @@ app.get('/',(req,res)=>{
 })
 
 
-
-
-
-app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 80')})
+app.listen(30001,()=>{console.log('escucha web:30001, escucha udp:80')})
