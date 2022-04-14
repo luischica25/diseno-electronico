@@ -4,9 +4,14 @@ var markers = new Array()
 var poliArray = new Array()
 range.value = 0
 var coords = new Array()
+var popup = L.popup()
+    
 const histLat = document.querySelector('.latitud')
 const histLng = document.querySelector('.longitud')
 const histTs = document.querySelector('.timestamp')
+
+
+
 
 async function getHistorics(){
     let idate = document.getElementById('finicial').value
@@ -25,10 +30,23 @@ async function getHistorics(){
 
     })
     return data = data.json()
+
+        
 }
 
-async function drawHistorics(){
-    Swal.fire('La fecha Inicial no puede ser anterior a la inicial ')
+
+
+
+navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const { coords } = pos
+      const { latitude, longitude } = coords
+      L.marker([latitude, longitude], { icon: iconMarker }).addTo(myMap)
+
+   
+async function drawHistorics(){                                                                                                                                                                                                                      
+
+
     deletePrev()
     data = await getHistorics()
     console.log("data: ", data)
@@ -38,7 +56,7 @@ async function drawHistorics(){
     forRange = []
     poliArray = []
     markers = []
-    
+
     for(var coord of data){
         var marker = L.marker([coord.latitud, coord.longitud]).addTo(map)
         coords.push([coord.latitud,coord.longitud])
@@ -72,4 +90,6 @@ function deletePrev(){
     for(var poly of poliArray){
         map.removeLayer(poly)
     }
+}
+
 }

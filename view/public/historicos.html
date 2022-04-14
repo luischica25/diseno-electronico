@@ -30,6 +30,7 @@
 
         <div class="main-container">
             <div class="table-container-h">
+                
 
                 <table class="table">
                     <!-- <form id="hist_form"> -->
@@ -41,6 +42,8 @@
                             <input type="datetime-local" name="ffinal" id="ffinal">
                         </tr>
                         <button onclick="drawHistorics()">Search</button>
+
+                        
 
                         <div class="showData">
                             <div>
@@ -65,6 +68,7 @@
             </div>
 
             <div class="map-container">
+                
                 <div id="map"></div>
             </div>
 
@@ -88,6 +92,7 @@
 
 <script>
     var map = L.map('map').setView([11.018, -74.850], 14);
+    
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -96,5 +101,20 @@
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoibHVpc2NoaWNhIiwiYSI6ImNsMGViamN0czBoZ28zY3FzcHpnMGpvNHYifQ.YZGgB-aYKFdaFq10D_q6ow'
     }).addTo(map);
+
+    map.on('click',
+async function (e) {
+    
+
+    var latLngToLayerPoint = map.latLngToLayerPoint(e.latlng);
+          
+    console.log()
+    console.log(e.latlng.toString())
+        const response =await fetch(`/datahist?lat=${e.latlng.lat}&long=${e.latlng.lng}`)
+        console.log( await response.json()) 
+
+        
+})
 </script>
 <script src="../controller/historics.js"></script>
+

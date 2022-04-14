@@ -6,18 +6,17 @@ const express = require('express')
 var app = express()
 const moment = require('moment')
 const { timeStamp } = require('console')
-const { query } = require('express')
 var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: true })
 app.use(jsonParser)
 app.use(urlencodedParser)
 
 DBConfig = {
-    host: 'dbbyronnueva.cq1uih2wgpm9.us-east-1.rds.amazonaws.com',
+    host: '',
     port: '3306',
     user: 'admin',
-    password:"yonaciel100798",
-    database:'dbbyronnueva'
+    password:"disenoelectronico",
+    database:'diseno-electronico'
 }
 
 const connection = mysql.createConnection(DBConfig)
@@ -51,9 +50,8 @@ server.on('message',(msg,msgInfo)=>{
     }
 
 })
-server.bind(30001)
+server.bind(40001)
 /**Servidor HTTP de solicitudes por parte de el frontend */
-
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
     query = `SELECT latitud,longitud,timestamp
@@ -74,62 +72,9 @@ app.get('/data',async (req,res)=>{
         response
     })
 }) 
-
-app.use(express.static(__dirname+''))
-app.get('/datahist',async (req,res)=>{
-    const press_lat=req.query.lat 
-    const press_lng=req.query.long
-    query=`SELECT
-    *, (3959 * acos (
-        cos ( radians(${press_lat}) )
-        * cos( radians( latitud ) )
-        * cos( radians( longitud ) - radians(${press_lng}) )
-        + sin ( radians(${press_lat}) )
-        * sin( radians( latitud ) )
-      )
-    ) AS distance
-  FROM geolocalizacion
-  HAVING distance < 30
-  ORDER BY timestamp
-  LIMIT 0 , 20;`
-      
-
-    var response = new Array()
-    response = await new Promise((resolve,reject)=>{
-        connection.query(query,(e,d)=>{
-            if(e)throw e
-            else{
-                resolve(d[0])
-            }
-        })
-    })
-    res.status(200).json({
-        response
-    })
-}) 
-
-
-
-    var response = new Array()
-    response = await new Promise((resolve,reject)=>{
-        connection.query(query,(e,d)=>{
-            if(e)throw e
-            else{
-                resolve(d[0])
-            }
-        })
-    })
-    res.status(200).json({
-        response
-    })
-}) 
-
-
-
-
 app.post('/historicos', async(req,res)=>{
-    let loc = req.body.map.latLngToLayerPoint(e.latlng);
-    let latquery = req.body.map.latLngToLayerPoint(e.latlng.lat), let longquery = req.body.map.latLngToLayerPoint(e.latlng.long);
+    
+    let idate = req.body.finicial, fdate = req.body.ffinal
     idate = new Date(idate), fdate = new Date(fdate)
     idate = moment(idate).format('YYYY:MM:DD HH:mm:ss')
     fdate = moment(fdate).format('YYYY:MM:DD HH:mm:ss')
@@ -150,13 +95,8 @@ app.post('/historicos', async(req,res)=>{
 })
 app.get('/',(req,res)=>{
     path = __dirname+'/view'
-    res.sendFile(path+'/historicos.html')
+    res.sendFile(path+'/index.html')
 })
 
 
-
-
-
-
-
-app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 80')})
+app.listen(30001,()=>{console.log('escucha web:30001, escucha udp:80')})

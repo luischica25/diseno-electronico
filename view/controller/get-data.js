@@ -29,6 +29,9 @@ function deleteMarkers (markers){
     return markers = []
 }
 function setDataIntDoc(data){
+    if(!data){
+        return
+    }
     let timestamp = moment(data.timestamp).utcOffset('+00:00').format('YYYY:MM:DD hh:mm:ss')
     document.getElementById('lat').innerHTML = data.latitud
     document.getElementById('long').innerHTML = data.longitud
