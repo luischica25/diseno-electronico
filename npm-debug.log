@@ -1,0 +1,490 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'node' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.0
+4 verbose install initial load of C:\Users\user\Desktop\diseno-electronico\package.json
+5 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\abbrev\package.json
+6 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\accepts\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\acorn\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\acorn-walk\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\agent-base\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\amp\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\amp-message\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ansi-align\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ansi-colors\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ansi-regex\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ansi-styles\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\anymatch\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\append-field\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\argparse\package.json
+19 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\array-flatten\package.json
+20 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ast-types\package.json
+21 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\async\package.json
+22 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\async-listener\package.json
+23 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\axios\package.json
+24 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\balanced-match\package.json
+25 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\bignumber.js\package.json
+26 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\binary-extensions\package.json
+27 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\blessed\package.json
+28 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\bodec\package.json
+29 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\body-parser\package.json
+30 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\boxen\package.json
+31 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\brace-expansion\package.json
+32 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\braces\package.json
+33 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\buffer-from\package.json
+34 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\busboy\package.json
+35 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\bytes\package.json
+36 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\cacheable-request\package.json
+37 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\camelcase\package.json
+38 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\chalk\package.json
+39 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\charm\package.json
+40 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\chokidar\package.json
+41 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ci-info\package.json
+42 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\cli-boxes\package.json
+43 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\cli-tableau\package.json
+44 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\clone-response\package.json
+45 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\color-convert\package.json
+46 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\color-name\package.json
+47 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\commander\package.json
+48 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\concat-map\package.json
+49 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\concat-stream\package.json
+50 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\configstore\package.json
+51 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\content-disposition\package.json
+52 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\content-type\package.json
+53 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\continuation-local-storage\package.json
+54 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\cookie\package.json
+55 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\cookie-signature\package.json
+56 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\core-util-is\package.json
+57 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\croner\package.json
+58 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\crypto-random-string\package.json
+59 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\culvert\package.json
+60 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\data-uri-to-buffer\package.json
+61 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\dayjs\package.json
+62 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\debug\package.json
+63 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\decompress-response\package.json
+64 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\deep-extend\package.json
+65 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\deep-is\package.json
+66 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\defer-to-connect\package.json
+67 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\degenerator\package.json
+68 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\depd\package.json
+69 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\destroy\package.json
+70 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\dicer\package.json
+71 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\dot-prop\package.json
+72 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\duplexer3\package.json
+73 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ee-first\package.json
+74 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\emitter-listener\package.json
+75 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\emoji-regex\package.json
+76 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\encodeurl\package.json
+77 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\end-of-stream\package.json
+78 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\enquirer\package.json
+79 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\escape-goat\package.json
+80 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\escape-html\package.json
+81 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\escape-string-regexp\package.json
+82 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\escodegen\package.json
+83 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\esprima\package.json
+84 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\estraverse\package.json
+85 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\esutils\package.json
+86 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\etag\package.json
+87 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\eventemitter2\package.json
+88 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\express\package.json
+89 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fast-json-patch\package.json
+90 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fast-levenshtein\package.json
+91 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fclone\package.json
+92 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\file-uri-to-path\package.json
+93 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fill-range\package.json
+94 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\finalhandler\package.json
+95 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\follow-redirects\package.json
+96 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\forwarded\package.json
+97 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fresh\package.json
+98 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fs-extra\package.json
+99 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\fs.realpath\package.json
+100 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ftp\package.json
+101 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\function-bind\package.json
+102 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\get-stream\package.json
+103 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\get-uri\package.json
+104 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\git-node-fs\package.json
+105 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\git-sha1\package.json
+106 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\glob\package.json
+107 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\glob-parent\package.json
+108 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\global-dirs\package.json
+109 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\got\package.json
+110 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\graceful-fs\package.json
+111 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\has\package.json
+112 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\has-flag\package.json
+113 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\has-yarn\package.json
+114 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\http-cache-semantics\package.json
+115 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\http-errors\package.json
+116 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\http-proxy-agent\package.json
+117 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\https-proxy-agent\package.json
+118 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\iconv-lite\package.json
+119 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ignore-by-default\package.json
+120 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\import-lazy\package.json
+121 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\imurmurhash\package.json
+122 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\inflight\package.json
+123 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\inherits\package.json
+124 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ini\package.json
+125 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ip\package.json
+126 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ipaddr.js\package.json
+127 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-binary-path\package.json
+128 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-ci\package.json
+129 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-core-module\package.json
+130 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-extglob\package.json
+131 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-fullwidth-code-point\package.json
+132 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-glob\package.json
+133 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-installed-globally\package.json
+134 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-npm\package.json
+135 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-number\package.json
+136 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-obj\package.json
+137 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-path-inside\package.json
+138 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-typedarray\package.json
+139 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\is-yarn-global\package.json
+140 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\isarray\package.json
+141 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\js-git\package.json
+142 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\json-buffer\package.json
+143 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\json-stringify-safe\package.json
+144 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\jsonfile\package.json
+145 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\keyv\package.json
+146 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\latest-version\package.json
+147 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\lazy\package.json
+148 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\levn\package.json
+149 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\lodash\package.json
+150 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\log-driver\package.json
+151 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\lowercase-keys\package.json
+152 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\lru-cache\package.json
+153 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\make-dir\package.json
+154 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\media-typer\package.json
+155 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\merge-descriptors\package.json
+156 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\methods\package.json
+157 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mime\package.json
+158 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mime-db\package.json
+159 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mime-types\package.json
+160 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mimic-response\package.json
+161 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\minimatch\package.json
+162 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\minimist\package.json
+163 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mkdirp\package.json
+164 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\module-details-from-path\package.json
+165 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\moment\package.json
+166 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ms\package.json
+167 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\multer\package.json
+168 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mute-stream\package.json
+169 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\mysql\package.json
+170 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\needle\package.json
+171 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\negotiator\package.json
+172 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\netmask\package.json
+173 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\nodemon\package.json
+174 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\nopt\package.json
+175 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\normalize-path\package.json
+176 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\normalize-url\package.json
+177 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\nssocket\package.json
+178 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\object-assign\package.json
+179 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\on-finished\package.json
+180 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\once\package.json
+181 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\optionator\package.json
+182 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\p-cancelable\package.json
+183 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pac-proxy-agent\package.json
+184 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pac-resolver\package.json
+185 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\package-json\package.json
+186 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pako\package.json
+187 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\parseurl\package.json
+188 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\path-is-absolute\package.json
+189 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\path-parse\package.json
+190 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\path-to-regexp\package.json
+191 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\picomatch\package.json
+192 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pidusage\package.json
+193 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pm2\package.json
+194 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pm2-axon\package.json
+195 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pm2-axon-rpc\package.json
+196 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pm2-deploy\package.json
+197 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pm2-multimeter\package.json
+198 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pm2-sysmonit\package.json
+199 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\prelude-ls\package.json
+200 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\prepend-http\package.json
+201 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\process-nextick-args\package.json
+202 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\promptly\package.json
+203 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\proxy-addr\package.json
+204 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\proxy-agent\package.json
+205 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\proxy-from-env\package.json
+206 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pstree.remy\package.json
+207 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pump\package.json
+208 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\pupa\package.json
+209 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\qs\package.json
+210 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\range-parser\package.json
+211 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\raw-body\package.json
+212 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\rc\package.json
+213 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\read\package.json
+214 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\readable-stream\package.json
+215 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\readdirp\package.json
+216 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\registry-auth-token\package.json
+217 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\registry-url\package.json
+218 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\require-in-the-middle\package.json
+219 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\resolve\package.json
+220 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\responselike\package.json
+221 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\run-series\package.json
+222 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\safe-buffer\package.json
+223 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\safer-buffer\package.json
+224 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\sax\package.json
+225 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\semver\package.json
+226 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\semver-diff\package.json
+227 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\send\package.json
+228 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\serve-static\package.json
+229 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\setprototypeof\package.json
+230 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\shimmer\package.json
+231 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\signal-exit\package.json
+232 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\smart-buffer\package.json
+233 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\socks\package.json
+234 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\socks-proxy-agent\package.json
+235 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\source-map\package.json
+236 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\source-map-support\package.json
+237 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\sprintf-js\package.json
+238 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\sqlstring\package.json
+239 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\statuses\package.json
+240 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\streamsearch\package.json
+241 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\string-width\package.json
+242 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\string_decoder\package.json
+243 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\strip-ansi\package.json
+244 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\strip-json-comments\package.json
+245 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\sudo\package.json
+246 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\supports-color\package.json
+247 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\supports-preserve-symlinks-flag\package.json
+248 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\sweetalert2\package.json
+249 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\systeminformation\package.json
+250 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\to-readable-stream\package.json
+251 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\to-regex-range\package.json
+252 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\toidentifier\package.json
+253 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\touch\package.json
+254 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\tslib\package.json
+255 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\tv4\package.json
+256 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\tx2\package.json
+257 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\type-check\package.json
+258 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\type-fest\package.json
+259 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\type-is\package.json
+260 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\typedarray\package.json
+261 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\typedarray-to-buffer\package.json
+262 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\undefsafe\package.json
+263 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\unique-string\package.json
+264 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\universalify\package.json
+265 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\unpipe\package.json
+266 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\update-notifier\package.json
+267 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\url-parse-lax\package.json
+268 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\util-deprecate\package.json
+269 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\utils-merge\package.json
+270 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\uuid\package.json
+271 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\vary\package.json
+272 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\vizion\package.json
+273 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\vm2\package.json
+274 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\widest-line\package.json
+275 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\word-wrap\package.json
+276 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\wrap-ansi\package.json
+277 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\wrappy\package.json
+278 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\write-file-atomic\package.json
+279 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\ws\package.json
+280 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\xdg-basedir\package.json
+281 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\xregexp\package.json
+282 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\xtend\package.json
+283 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\yallist\package.json
+284 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\yamljs\package.json
+285 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@opencensus\core\package.json
+286 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@opencensus\propagation-b3\package.json
+287 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@pm2\agent\package.json
+288 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@pm2\io\package.json
+289 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@pm2\js-api\package.json
+290 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@pm2\pm2-version-check\package.json
+291 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@sindresorhus\is\package.json
+292 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@szmarczak\http-timer\package.json
+293 verbose installManyTop reading scoped package data from C:\Users\user\Desktop\diseno-electronico\node_modules\@tootallnate\once\package.json
+294 info package.json @tootallnate/once@1.1.2 No README data
+295 info package.json sudo@1.0.3 No license field.
+296 info package.json busboy@0.2.14 No license field.
+297 info package.json charm@0.1.2 license should be a valid SPDX license expression
+298 info package.json cli-tableau@2.0.1 No license field.
+299 info package.json dicer@0.2.5 No license field.
+300 info package.json ftp@0.3.10 No license field.
+301 info package.json lazy@1.0.11 license should be a valid SPDX license expression
+302 info package.json nopt@1.0.10 license should be a valid SPDX license expression
+303 info package.json pm2-sysmonit@1.2.8 No repository field.
+304 info package.json pm2-sysmonit@1.2.8 license should be a valid SPDX license expression
+305 info package.json pm2-multimeter@0.1.2 license should be a valid SPDX license expression
+306 info package.json prelude-ls@1.1.2 No license field.
+307 info package.json streamsearch@0.1.2 No license field.
+308 info package.json string_decoder@1.1.1 string_decoder is also the name of a node core module.
+309 info package.json tx2@1.0.5 No repository field.
+310 info package.json tv4@1.3.0 license should be a valid SPDX license expression
+311 info package.json @pm2/agent@2.0.1 No repository field.
+312 info package.json @pm2/js-api@0.6.7 license should be a valid SPDX license expression
+313 info package.json @pm2/io@5.0.0 license should be a valid SPDX license expression
+314 info package.json @pm2/pm2-version-check@1.0.4 No repository field.
+315 verbose readDependencies loading dependencies from C:\Users\user\Desktop\diseno-electronico\package.json
+316 silly cache add args [ 'node', null ]
+317 verbose cache add spec node
+318 silly cache add parsed spec Result {
+318 silly cache add   raw: 'node',
+318 silly cache add   scope: null,
+318 silly cache add   name: 'node',
+318 silly cache add   rawSpec: '',
+318 silly cache add   spec: 'latest',
+318 silly cache add   type: 'tag' }
+319 silly addNamed node@latest
+320 verbose addNamed "latest" is being treated as a dist-tag for node
+321 info addNameTag [ 'node', 'latest' ]
+322 silly mapToRegistry name node
+323 silly mapToRegistry using default registry
+324 silly mapToRegistry registry https://registry.npmjs.org/
+325 silly mapToRegistry uri https://registry.npmjs.org/node
+326 verbose addNameTag registry:https://registry.npmjs.org/node not in flight; fetching
+327 verbose request uri https://registry.npmjs.org/node
+328 verbose request no auth needed
+329 info attempt registry request try #1 at 21:25:59
+330 verbose request id ce9099ee5a2914c0
+331 verbose etag W/"27a20f0f77081f82b57de785eed1aeef"
+332 verbose lastModified Tue, 29 Mar 2022 00:21:19 GMT
+333 http request GET https://registry.npmjs.org/node
+334 http 304 https://registry.npmjs.org/node
+335 verbose headers { date: 'Fri, 15 Apr 2022 02:25:59 GMT',
+335 verbose headers   connection: 'keep-alive',
+335 verbose headers   'cf-ray': '6fc13bd678a03efa-BOG',
+335 verbose headers   'cache-control': 'public, max-age=300',
+335 verbose headers   etag: '"27a20f0f77081f82b57de785eed1aeef"',
+335 verbose headers   'last-modified': 'Tue, 29 Mar 2022 00:21:19 GMT',
+335 verbose headers   vary: 'Accept-Encoding',
+335 verbose headers   'cf-cache-status': 'REVALIDATED',
+335 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+335 verbose headers   'x-amz-replication-status': 'COMPLETED',
+335 verbose headers   server: 'cloudflare' }
+336 silly get cb [ 304,
+336 silly get   { date: 'Fri, 15 Apr 2022 02:25:59 GMT',
+336 silly get     connection: 'keep-alive',
+336 silly get     'cf-ray': '6fc13bd678a03efa-BOG',
+336 silly get     'cache-control': 'public, max-age=300',
+336 silly get     etag: '"27a20f0f77081f82b57de785eed1aeef"',
+336 silly get     'last-modified': 'Tue, 29 Mar 2022 00:21:19 GMT',
+336 silly get     vary: 'Accept-Encoding',
+336 silly get     'cf-cache-status': 'REVALIDATED',
+336 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+336 silly get     'x-amz-replication-status': 'COMPLETED',
+336 silly get     server: 'cloudflare' } ]
+337 verbose etag https://registry.npmjs.org/node from cache
+338 verbose get saving node to C:\Users\user\AppData\Roaming\npm-cache\registry.npmjs.org\node\.cache.json
+339 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+340 silly addNameTag next cb for node with tag latest
+341 silly addNamed node@17.7.2
+342 verbose addNamed "17.7.2" is a plain semver version for node
+343 silly cache afterAdd node@17.7.2
+344 verbose afterAdd C:\Users\user\AppData\Roaming\npm-cache\node\17.7.2\package\package.json not in flight; writing
+345 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+346 verbose afterAdd C:\Users\user\AppData\Roaming\npm-cache\node\17.7.2\package\package.json written
+347 silly install resolved [ { name: 'node',
+347 silly install resolved     version: '17.7.2',
+347 silly install resolved     description: 'node',
+347 silly install resolved     main: 'index.js',
+347 silly install resolved     keywords: [ 'runtime' ],
+347 silly install resolved     repository:
+347 silly install resolved      { type: 'git',
+347 silly install resolved        url: 'git+https://github.com/aredridel/node-bin-gen.git' },
+347 silly install resolved     scripts: { preinstall: 'node installArchSpecificPackage' },
+347 silly install resolved     bin: { node: 'bin/node' },
+347 silly install resolved     dependencies: { 'node-bin-setup': '^1.0.0' },
+347 silly install resolved     license: 'ISC',
+347 silly install resolved     author: '',
+347 silly install resolved     engines: { npm: '>=5.0.0' },
+347 silly install resolved     bugs: { url: 'https://github.com/aredridel/node-bin-gen/issues' },
+347 silly install resolved     homepage: 'https://github.com/aredridel/node-bin-gen#readme',
+347 silly install resolved     _id: 'node@17.7.2',
+347 silly install resolved     _nodeVersion: '17.8.0',
+347 silly install resolved     _npmVersion: '8.5.5',
+347 silly install resolved     dist:
+347 silly install resolved      { integrity: 'sha512-1hLwQfuA39nUDxCTwKqS8l27E9OEzfAdK5xU4Wcr3h2FrQao6qWNnurgWn4GJn9g6tfHuuupyrBl1lvMLNnecw==',
+347 silly install resolved        shasum: '855d617466fefb458b2b985155bdbbd23befaacc',
+347 silly install resolved        tarball: 'https://registry.npmjs.org/node/-/node-17.7.2.tgz',
+347 silly install resolved        fileCount: 3,
+347 silly install resolved        unpackedSize: 1475,
+347 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiQlD+ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmowdhAAoDBPKuTgKOAHTxo4hdv1YbCXH2wlmL9eMpzDAnEJ+qSBho5F\r\nOOUgIxCchqRdpd+aF4iVxBOnUKzkGRomP25tZuawHVxHyjgFTKZRtcu5GwaM\r\niQMQYn4/vQNylaUq539XlDBnJ02Cort8gnJw3E/1V07TAjNui3qdiYPKc+ai\r\nbIUNO4/mO9wYrfqU96JeBs7cQeBawgzsjhSOBfztdI1qaiVoNo9C7pjDiow5\r\nl1k5oefK9UXbeIMhd9IBGbQ7LPwqtOyEsnBSFke2zIGzySRLGTTChltgdCv9\r\nNbi3GwU/o2AQfTsWuM/RTNwDBK1sksU28D75mvBKDgKZepGPe22pwJYKiG4T\r\naR6JPPmEmTZ6AmNsN9k+Zh3kZXtTp0Wx6wIGGUhBY0BQn/Dhyn8fUoZk4YqA\r\nxs1R1gA/y9IXrY/MPtGKmF/jJVFeUW7vg4E9uChdBAQ2bzAXGgY5LeloXBm3\r\nHDm8BIGXW3EI5r4CrGzO+72+hoKWDex096Y6gxbn++aZQrHnMywWQsd/940g\r\nyMqpMklFv+2Z0iEIRkK5ZG5XT2jkalOpYKfCRZb9S7xtvoDXMFSqPy1Lq9tU\r\n+R2oVJwD1Q8wJE5rdhwv/Mqzz6B3YQ8km5ApKVPx004w+u8l0+5xvPa69gZw\r\nzS1jbS3f0QP/b3EdizZp2f3UZ5bEixoRZ+g=\r\n=2hmN\r\n-----END PGP SIGNATURE-----\r\n' },
+347 silly install resolved     _npmUser: { name: 'aredridel', email: 'aredridel@dinhe.net' },
+347 silly install resolved     directories: {},
+347 silly install resolved     maintainers: [ [Object], [Object] ],
+347 silly install resolved     _npmOperationalInternal:
+347 silly install resolved      { host: 's3://npm-registry-packages',
+347 silly install resolved        tmp: 'tmp/node_17.7.2_1648513277845_0.08531302670453833' },
+347 silly install resolved     _hasShrinkwrap: false,
+347 silly install resolved     _shasum: '855d617466fefb458b2b985155bdbbd23befaacc',
+347 silly install resolved     _resolved: 'https://registry.npmjs.org/node/-/node-17.7.2.tgz',
+347 silly install resolved     _from: 'node@latest',
+347 silly install resolved     readme: 'ERROR: No README data found!' } ]
+348 info install node@17.7.2 into C:\Users\user\Desktop\diseno-electronico
+349 info installOne node@17.7.2
+350 verbose installOne of node to C:\Users\user\Desktop\diseno-electronico not in flight; installing
+351 verbose correctMkdir C:\Users\user\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+352 verbose lock using C:\Users\user\AppData\Roaming\npm-cache\_locks\node-0622a74a5c73f9f2.lock for C:\Users\user\Desktop\diseno-electronico\node_modules\node
+353 warn engine node@17.7.2: wanted: {"npm":">=5.0.0"} (current: {"node":"4.4.0","npm":"2.14.20"})
+354 silly install write writing node 17.7.2 to C:\Users\user\Desktop\diseno-electronico\node_modules\node
+355 verbose unbuild node_modules\node
+356 silly gentlyRm C:\Users\user\Desktop\diseno-electronico\node_modules\node is being purged from base C:\Users\user\Desktop\diseno-electronico
+357 verbose gentlyRm don't care about contents; nuking C:\Users\user\Desktop\diseno-electronico\node_modules\node
+358 verbose tar unpack C:\Users\user\AppData\Roaming\npm-cache\node\17.7.2\package.tgz
+359 verbose tar unpacking to C:\Users\user\Desktop\diseno-electronico\node_modules\node
+360 silly gentlyRm C:\Users\user\Desktop\diseno-electronico\node_modules\node is being purged
+361 verbose gentlyRm don't care about contents; nuking C:\Users\user\Desktop\diseno-electronico\node_modules\node
+362 silly gunzTarPerm modes [ '777', '666' ]
+363 silly gunzTarPerm extractEntry installArchSpecificPackage.js
+364 silly gunzTarPerm modified mode [ 'installArchSpecificPackage.js', 420, 438 ]
+365 silly gunzTarPerm extractEntry package.json
+366 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+367 silly gunzTarPerm extractEntry README.md
+368 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+369 verbose write writing to C:\Users\user\Desktop\diseno-electronico\node_modules\node\package.json
+370 info preinstall node@17.7.2
+371 verbose unsafe-perm in lifecycle true
+372 info node@17.7.2 Failed to exec preinstall script
+373 verbose unlock done using C:\Users\user\AppData\Roaming\npm-cache\_locks\node-0622a74a5c73f9f2.lock for C:\Users\user\Desktop\diseno-electronico\node_modules\node
+374 verbose stack Error: node@17.7.2 preinstall: `node installArchSpecificPackage`
+374 verbose stack Exit status 1
+374 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
+374 verbose stack     at emitTwo (events.js:87:13)
+374 verbose stack     at EventEmitter.emit (events.js:172:7)
+374 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+374 verbose stack     at emitTwo (events.js:87:13)
+374 verbose stack     at ChildProcess.emit (events.js:172:7)
+374 verbose stack     at maybeClose (internal/child_process.js:827:16)
+374 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+375 verbose pkgid node@17.7.2
+376 verbose cwd C:\Users\user\Desktop\diseno-electronico
+377 error Windows_NT 6.1.7601
+378 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "node"
+379 error node v4.4.0
+380 error npm  v2.14.20
+381 error code ELIFECYCLE
+382 error node@17.7.2 preinstall: `node installArchSpecificPackage`
+382 error Exit status 1
+383 error Failed at the node@17.7.2 preinstall script 'node installArchSpecificPackage'.
+383 error This is most likely a problem with the node package,
+383 error not with npm itself.
+383 error Tell the author that this fails on your system:
+383 error     node installArchSpecificPackage
+383 error You can get information on how to open an issue for this project with:
+383 error     npm bugs node
+383 error Or if that isn't available, you can get their info via:
+383 error
+383 error     npm owner ls node
+383 error There is likely additional logging output above.
+384 verbose exit [ 1, true ]
+385 verbose unbuild node_modules\node
+386 info preuninstall node@17.7.2
+387 info uninstall node@17.7.2
+388 verbose unbuild rmStuff node@17.7.2 from C:\Users\user\Desktop\diseno-electronico\node_modules
+389 silly gentlyRm C:\Users\user\Desktop\diseno-electronico\node_modules\.bin\node.cmd is being gently removed
+390 silly gentlyRm verifying C:\Users\user\Desktop\diseno-electronico is an npm working directory
+391 silly gentlyRm containing path C:\Users\user\Desktop\diseno-electronico is under npm's control, in C:\Users\user\Desktop\diseno-electronico
+392 silly gentlyRm deletion target C:\Users\user\Desktop\diseno-electronico\node_modules\.bin\node.cmd is under C:\Users\user\Desktop\diseno-electronico
+393 verbose gentlyRm vacuuming from C:\Users\user\Desktop\diseno-electronico\node_modules\.bin\node.cmd up to C:\Users\user\Desktop\diseno-electronico
+394 silly gentlyRm C:\Users\user\Desktop\diseno-electronico\node_modules\.bin\node is being gently removed
+395 silly gentlyRm verifying C:\Users\user\Desktop\diseno-electronico is an npm working directory
+396 silly gentlyRm containing path C:\Users\user\Desktop\diseno-electronico is under npm's control, in C:\Users\user\Desktop\diseno-electronico
+397 silly gentlyRm deletion target C:\Users\user\Desktop\diseno-electronico\node_modules\.bin\node is under C:\Users\user\Desktop\diseno-electronico
+398 verbose gentlyRm vacuuming from C:\Users\user\Desktop\diseno-electronico\node_modules\.bin\node up to C:\Users\user\Desktop\diseno-electronico
+399 info postuninstall node@17.7.2
+400 silly gentlyRm C:\Users\user\Desktop\diseno-electronico\node_modules\node is being purged from base C:\Users\user\Desktop\diseno-electronico
+401 verbose gentlyRm don't care about contents; nuking C:\Users\user\Desktop\diseno-electronico\node_modules\node
+402 silly vacuum-fs purging C:\Users\user\Desktop\diseno-electronico\node_modules\node
+403 silly vacuum-fs quitting because other entries in C:\Users\user\Desktop\diseno-electronico\node_modules

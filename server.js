@@ -5,19 +5,20 @@ var bodyParser = require('body-parser')
 const express = require('express')
 var app = express()
 const moment = require('moment')
-const { timeStamp } = require('console')
-const { query } = require('express')
+const timeStamp = require('console')
+const  query  = require('express')
+const res = require('express/lib/response')
 var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: true })
 app.use(jsonParser)
 app.use(urlencodedParser)
 
 DBConfig = {
-    host: 'dbbyronnueva.cq1uih2wgpm9.us-east-1.rds.amazonaws.com',
+    host: 'disenoelectronico.cc3xavelbops.us-east-1.rds.amazonaws.com',
     port: '3306',
     user: 'admin',
-    password:"yonaciel100798",
-    database:'dbbyronnueva'
+    password:"disenoelectronico",
+    database:'diseno-electronico'
 }
 
 const connection = mysql.createConnection(DBConfig)
@@ -76,6 +77,11 @@ app.get('/data',async (req,res)=>{
 }) 
 
 app.use(express.static(__dirname+''))
+app.get('/hola',(req,res)=>{
+    res.send('Hola')
+
+    
+})
 app.get('/datahist',async (req,res)=>{
     const press_lat=req.query.lat 
     const press_lng=req.query.long
@@ -88,7 +94,7 @@ app.get('/datahist',async (req,res)=>{
         * sin( radians( latitud ) )
       )
     ) AS distance
-  FROM geolocalizacion
+  FROM dbbyronnueva.geolocalizacion
   HAVING distance < 30
   ORDER BY timestamp
   LIMIT 0 , 20;`
@@ -122,14 +128,15 @@ app.get('/datahist',async (req,res)=>{
     res.status(200).json({
         response
     })
-}) 
+
 
 
 
 
 app.post('/historicos', async(req,res)=>{
     let loc = req.body.map.latLngToLayerPoint(e.latlng);
-    let latquery = req.body.map.latLngToLayerPoint(e.latlng.lat), let longquery = req.body.map.latLngToLayerPoint(e.latlng.long);
+    let latquery = req.body.map.latLngToLayerPoint(e.latlng.lat)
+    let longquery = req.body.map.latLngToLayerPoint(e.latlng.long);
     idate = new Date(idate), fdate = new Date(fdate)
     idate = moment(idate).format('YYYY:MM:DD HH:mm:ss')
     fdate = moment(fdate).format('YYYY:MM:DD HH:mm:ss')
@@ -154,9 +161,4 @@ app.get('/',(req,res)=>{
 })
 
 
-
-
-
-
-
-app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 80')})
+app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 40001')})

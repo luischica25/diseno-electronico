@@ -112,6 +112,8 @@ async function (e) {
     console.log(e.latlng.toString())
         const response =await fetch(`/datahist?lat=${e.latlng.lat}&long=${e.latlng.lng}`)
         console.log( await response.json()) 
+        
+        PopUP=L.popup().setContent("Fecha: " + data[0].fecha.replace("T00:00:00.000Z","") + '<br>  Hora: ' + data[0].hora).setLatLng([data[0].latitud,data[0].longitud]).openOn(map);
 
         
 })
