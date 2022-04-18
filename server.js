@@ -116,18 +116,7 @@ app.get('/datahist',async (req,res)=>{
 
 
 
-    var response = new Array()
-    response = await new Promise((resolve,reject)=>{
-        connection.query(query,(e,d)=>{
-            if(e)throw e
-            else{
-                resolve(d[0])
-            }
-        })
-    })
-    res.status(200).json({
-        response
-    })
+
 
 
 
