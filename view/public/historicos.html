@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link type="text/css" href="visual.css" rel="stylesheet" >
-    <link rel="stylesheet" href="range.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -26,13 +25,11 @@
                 <a href="/">Inicio</a>
             </nav>  
         </div>
-
-
+    
         <div class="main-container">
             <div class="table-container-h">
 
                 <table class="table">
-                    <!-- <form id="hist_form"> -->
                         <tr>
                             <input type="datetime-local" name="finicial" id="finicial">
                         </tr>
@@ -40,27 +37,8 @@
                             
                             <input type="datetime-local" name="ffinal" id="ffinal">
                         </tr>
-                        <button onclick="drawHistorics()">Search</button>
-
-                        <div class="showData">
-                            <div>
-                                <h6>Latitud: </h6>
-                                <div class="latitud"></div>
-                            </div>
-                            <div>
-                                <h6>Longitud: </h6>
-                                <div class="longitud"></div>
-                            </div>
-                            <div>
-                                <h6>TimeStamp: </h6>
-                                <div class="timestamp"></div>
-                            </div>
-                            
-                            
-                            
+                        <button onclick="drawHistorics()">Search</button>                 
                         </div>
-                        <!-- <button type="submit">Search</button> -->
-                    <!-- </form> -->
                 </table>
             </div>
 
@@ -79,13 +57,7 @@
       
     </main>
 
-    <div class="slider-container">
-        <input type="range" id="range" class="range">
-    </div>
-</body>
 </html>
-
-
 <script>
     var map = L.map('map').setView([11.018, -74.850], 14);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -97,4 +69,6 @@
     accessToken: 'pk.eyJ1IjoibHVpc2NoaWNhIiwiYSI6ImNsMGViamN0czBoZ28zY3FzcHpnMGpvNHYifQ.YZGgB-aYKFdaFq10D_q6ow'
     }).addTo(map);
 </script>
+<script src="../controller/getlog.js"></script>
 <script src="../controller/historics.js"></script>
+<script src="../controller/sidenav.js"></script>

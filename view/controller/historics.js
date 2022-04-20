@@ -2,7 +2,6 @@ const range = document.querySelector('#range')
 var forRange = new Array()
 var markers = new Array()
 var poliArray = new Array()
-range.value = 0
 var coords = new Array()
 const histLat = document.querySelector('.latitud')
 const histLng = document.querySelector('.longitud')
@@ -37,33 +36,15 @@ async function drawHistorics(){
     markers = []
     
     for(var coord of data){
-        var marker = L.marker([coord.latitud, coord.longitud]).addTo(map)
+        
         coords.push([coord.latitud,coord.longitud])
         forRange.push(coord)
-        markers.push(marker)
     }
     var polyline = L.polyline(coords).addTo(map);
     poliArray.push(polyline)
-    setRange()
-}
-
-function setRange(){
-    range.max = forRange.length
-    range.addEventListener('change', function(e){
-        const index = this.value
-        const data = forRange[index]
-
-        histLat.innerHTML = data.latitud
-        histLng.innerHTML = data.longitud
-        histTs.innerHTML = data.timestamp
-    })
 }
 
 function deletePrev(){
-    for(var marker of markers){
-        map.removeLayer(marker)
-    }
-
     for(var poly of poliArray){
         map.removeLayer(poly)
     }
