@@ -52,7 +52,6 @@ server.on('message',(msg,msgInfo)=>{
 })
 server.bind(40001)
 /**Servidor HTTP de solicitudes por parte de el frontend */
-app.listen(80,()=>{console.log('escucha web: 80, escucha udp: 40001')})
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
     query = `SELECT latitud,longitud,timestamp
@@ -99,3 +98,4 @@ app.get('/',(req,res)=>{
     path = __dirname+'/view'
     res.sendFile(path+'/index.html')
 })
+app.listen(30001,()=>{console.log('escucha web: 80, escucha udp: 40001')})
