@@ -28,16 +28,21 @@
     
         <div class="main-container">
             <div class="table-container-h">
+                
 
                 <table class="table">
                         <tr>
-                            <input type="datetime-local" name="finicial" id="finicial">
+                            <input type="datetime-local" name="finicial" id="finicial" onchange="rangoi(this)">
                         </tr>
                         <tr>
                             
-                            <input type="datetime-local" name="ffinal" id="ffinal">
+                            <input type="datetime-local" name="ffinal" id="ffinal"onchange='rangof(this)'>
                         </tr>
-                        <button onclick="drawHistorics()">Search</button>                 
+                        <button onclick="drawHistorics()">Search</button> 
+                        <p>1. introducir el rango de fechas </p>  
+                        <p>2. para buscar por ubicacion haga clic en el mapa</p> 
+                        <p>nota: para el correcto funcinamiento limite su busqueda a rango cortos</p>  
+
                         </div>
                 </table>
             </div>
@@ -51,14 +56,16 @@
 
         <div class="footer">
             <div class="authors">
-                <p>Autores</p>
+                <p>Autores Luis Chica, Byron Martinez</p>
             </div>
         </div>
       
     </main>
 
 </html>
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+<script> 
+    var valorfinal, valorinicial
     var map = L.map('map').setView([11.018, -74.850], 14);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -68,6 +75,20 @@
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoibHVpc2NoaWNhIiwiYSI6ImNsMGViamN0czBoZ28zY3FzcHpnMGpvNHYifQ.YZGgB-aYKFdaFq10D_q6ow'
     }).addTo(map);
+function rangoi (input){
+     if(moment(valorfinal).diff(moment(input.value)) <= 0){
+         alert("Invalid input time range...")
+     }else{
+         valorinicial = input.value
+     }
+ }
+ function rangof (input){
+     if(moment(input.value).diff(moment(valorinicial)) <= 0){
+         alert("Invalid input time range...")
+     }else{
+         valorfinal = input.value
+     }
+ } 
 </script>
 <script src="../controller/getlog.js"></script>
 <script src="../controller/historics.js"></script>

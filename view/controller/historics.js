@@ -36,9 +36,8 @@ async function drawHistorics(){
     markers = []
     
     for(var coord of data){
+        coords.push([coord.latitud,coord.longitud,coord.timestamp])
         
-        coords.push([coord.latitud,coord.longitud])
-        forRange.push(coord)
     }
     var polyline = L.polyline(coords).addTo(map);
     poliArray.push(polyline)
