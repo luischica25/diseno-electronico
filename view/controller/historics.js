@@ -42,6 +42,7 @@ async function drawHistorics(){
     }
     var polyline = L.polyline(coords).addTo(map);
     poliArray.push(polyline)
+
 }
 
 function deletePrev(){
