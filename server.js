@@ -81,7 +81,8 @@ app.post('/historicos', async(req,res)=>{
     fdate = moment(fdate).format('YYYY:MM:DD HH:mm:ss')
     query = `SELECT latitud,longitud,timestamp
     FROM geolocalizacion
-    WHERE timestamp BETWEEN '${idate}' AND '${fdate}'`
+    WHERE timestamp BETWEEN '${idate}' AND '${fdate}'
+    ORDER BY timestamp asc`
     response = await new Promise((resolve,reject)=>{
         connection.query(query,(e,d)=>{
             if(e)throw e
