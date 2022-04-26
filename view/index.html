@@ -1,75 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link type="text/css" href="view/public/visual.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <meta charset="UTF-8">,
+
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" type="image/x-icon" href="/view/public/Taxilog_png.png">
+    <title>Taxilog</title>
+    <link type="text/css" href="../view/public/visual.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <title>Taxilog</title>
 </head>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<body>
 
-<body> 
-    <main>
-        <div class="container-title">
-            <h1>TAXILOG</h1>
-            <p>Servicio de geolocalización de vehiculos en la ciudad de Barranquilla</p>
-            <nav>
-                <a href="/view/public/historicos.html">historicos</a>
-            </nav>  
+    <div class="page-container">
+       
+        <div id="map"></div>
+
+        <div class="info-table">
+            <div class="logo-container">
+                <img src="../view/public/Taxilog_png.png" alt="Logo">
+            </div>
+
+            <div class="info-field field-lat">
+                <div class="info-name">Lat</div>
+                <div class="info-value" id="lat">0.0</div>
+            </div>
+            <div class="info-field field-lng">
+                <div class="info-name">Lng</div>
+                <div class="info-value" id="long">0.0</div>
+            </div>
+            <div class="info-field field-ts">
+                <div class="info-name">Time Stamp</div>
+                <div class="info-value" id="fecha">00:00</div>
+            </div>
         </div>
 
+        <div class="historicos">
 
-        <div class="main-container">
-            <div class="table-container">
-
-                <table class="table">
-                
-                    <tr>
-                        <td class="geo-data">Lat</td>
-                        <td class="geo-data">Long</td>    
-                    </tr>
-                    <tr>
-                        <td class="geo-data" id="lat">0.0</td>
-                        <td class="geo-data" id="long">0.0</td>
-                    </tr>
-                </table>
-                <table class="table">
+            <a href="/historicos">historicos</a>
+        </div>
+    </div>
     
-                        <tr>
-                            <td class="time-data"> Timestamp</td>
-                        </tr>
-                        <tr>
-                            <td class="time-data" id="fecha">----------------------------</td>
-                        </tr>
-                    
-                </table>
-            </div>
-
-            <div class="map-container">
-                <div id="map"></div>
-            </div>
-
-
-        </div>
-
-        <div class="footer">
-            <div class="authors">
-                <p>Autores</p>
-            </div>
-        </div>
-      
-    </main>
 </body>
 
 </html>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
 <script>
     var map = L.map('map').setView([11.018, -74.850], 14);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -81,5 +61,4 @@
     accessToken: 'pk.eyJ1IjoibHVpc2NoaWNhIiwiYSI6ImNsMGViamN0czBoZ28zY3FzcHpnMGpvNHYifQ.YZGgB-aYKFdaFq10D_q6ow'
     }).addTo(map);
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<script src="view/controller/get-data.js"></script>
+<script src="../view/controller/get-data.js"></script>

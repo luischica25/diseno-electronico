@@ -25,15 +25,18 @@ async function getHistorics(){
 }
 
 async function drawHistorics(){
+    for(var marker of markers){
+        map.removeLayer(marker)   
+       }
+    
     deletePrev()
     data = await getHistorics()
-    console.log("data: ", data)
-    console.log("data: ", data.response)
+    /*console.log("data: ", data)
+    console.log("data: ", data.response)*/
     data = data.response
     coords = []
     forRange = []
     poliArray = []
-    markers = []
     
     for(var coord of data){
         coords.push([coord.latitud,coord.longitud,coord.timestamp])
@@ -41,6 +44,8 @@ async function drawHistorics(){
     }
     var polyline = L.polyline(coords).addTo(map);
     poliArray.push(polyline)
+
+    
 
 }
 

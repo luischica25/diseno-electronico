@@ -1,30 +1,35 @@
 var vetcircle
-var markers= new Array
+var markers = new Array() 
+var points = new Array()
 map.on('click',
 async function (e) {
-if(markers.length>0){
-    for(var marker of markers){
-     map.removeLayer(marker)   
-    }
-}
-if(vetcircle){
+    points=[]
+    if(vetcircle){
     map.removeLayer(vetcircle)
-}
-var points = new Array()
-var circle = L.circle(e.latlng, {radius:95})
-circle.addTo(map)
-
-vetcircle = circle
-
-var circleCenterPoint = circle.getLatLng(); //gets the circle's center latlng
-for(var coord of coords){
-    var isInCircleRadius = Math.abs(circleCenterPoint.distanceTo(coord)) <= 95
-    if  (isInCircleRadius){ 
-        points.push(coord)
-        var marker = L.marker([coord[0], coord[1]]).addTo(map)
-        marker.bindPopup('lat: '+coord[0]+', long: '+coord[1]+', datatime: '+ coord[2]).openPopup();
-        markers.push(marker)
-
     }
-}
+    
+    var circle = L.circle(e.latlng, {radius:95})
+    circle.addTo(map)
+    
+    vetcircle = circle
+
+    var circleCenterPoint = circle.getLatLng(); //gets the circle's center latlng
+    for(var coord of coords){
+    var isInCircleRadius = Math.abs(circleCenterPoint.distanceTo(coord)) <= 95
+        if  (isInCircleRadius){ 
+            points.push(coord)
+        }      
+    }
+    slider.max = points.length - 1
 })
+
+async function vectormarket(){
+    if(markers.length > 0){
+        for(var marker of markers){
+            map.removeLayer(marker)
+        }
+    }
+    const value = points[slider.value]
+    const marker2 =L.marker([value[0],value[1]]).addTo(map)
+    markers.push(marker2)
+}

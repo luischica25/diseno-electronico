@@ -23,7 +23,8 @@ const connection = mysql.createConnection(DBConfig)
 connection.connect((error)=>{
     if(error){
         console.log(error)
-        connection.end()}
+        connection.end()
+    }
     
 })
 
@@ -50,9 +51,7 @@ server.on('message',(msg,msgInfo)=>{
     }
 
 })
-server.bind(40001)
-/**Servidor HTTP de solicitudes por parte de el frontend */
-app.listen(80,()=>{console.log('escucha web: 80, escucha udp: 40001')})
+
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
     query = `SELECT latitud,longitud,timestamp
@@ -73,6 +72,10 @@ app.get('/data',async (req,res)=>{
         response
     })
 }) 
+app.get('/historicos', function(req,res){
+    path = __dirname+'/view'
+    res.sendFile(path+'/public/historicos.html')
+})
 app.post('/historicos', async(req,res)=>{
     
     let idate = req.body.finicial, fdate = req.body.ffinal
@@ -99,3 +102,6 @@ app.get('/',(req,res)=>{
     path = __dirname+'/view'
     res.sendFile(path+'/index.html')
 })
+server.bind(40001)
+/**Servidor HTTP de solicitudes por parte de el frontend */
+app.listen(30001,()=>{console.log('escucha web: 30001, escucha udp: 40001')})

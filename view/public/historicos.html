@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link type="text/css" href="visual.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" type="image/x-icon" href="/view/public/Taxilog_png.png">
+    <title>Taxilog</title>
+    <link type="text/css" href="../view/public/visual.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <title>Taxilog</title>
 </head>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-<body> 
-    <main>
-        <div class="container-title">
-            <h1>TAXILOG</h1>
-            <p>Servicio de geolocalización de vehiculos en la ciudad de Barranquilla</p>
-            <nav>
-                <a href="/">Inicio</a>
-            </nav>  
-        </div>
+<body>
     
-        <div class="main-container">
-            <div class="table-container-h">
-                
+    <div class="page-container">
+       
+        <div id="map"></div>
 
-                <table class="table">
-                        <tr>
-                            <input type="datetime-local" name="finicial" id="finicial" onchange="rangoi(this)">
-                        </tr>
-                        <tr>
-                            
-                            <input type="datetime-local" name="ffinal" id="ffinal"onchange='rangof(this)'>
-                        </tr>
-                        <button onclick="drawHistorics()">Search</button> 
-                        <p>1. introducir el rango de fechas </p>  
-                        <p>2. para buscar por ubicacion haga clic en el mapa</p> 
-                        <p>nota: para el correcto funcinamiento limite su busqueda a rango cortos</p>  
-
-                        </div>
-                </table>
+        <div class="info-table historics">
+            <div class="logo-container">
+                <img src="../view/public/Taxilog_png.png" alt="Logo">
             </div>
-
-            <div class="map-container">
-                <div id="map"></div>
-            </div>
-
-
+             
+            <input type="datetime-local" name="finicial" id="finicial" class="finicial" onchange="rangoi(this)">
+            <input type="datetime-local" name="ffinal" id="ffinal" class="ffinal" onchange='rangof(this)'> 
+            <input type="range" name="slider" id="slider" onchange="vectormarket()">
+            <button onclick="drawHistorics() " class="search">Search</button>
         </div>
+        
 
-        <div class="footer">
-            <div class="authors">
-                <p>Autores Luis Chica, Byron Martinez</p>
-            </div>
+        <div class="historicos">
+
+            <a href="/">home</a>
         </div>
-      
-    </main>
+    </div>
+    
+</body>
 
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
@@ -90,6 +68,6 @@ function rangoi (input){
      }
  } 
 </script>
-<script src="../controller/getlog.js"></script>
-<script src="../controller/historics.js"></script>
-<script src="../controller/sidenav.js"></script>
+
+<script src="../view/controller/getlog.js"></script>
+<script src="../view/controller/historics.js"></script>
