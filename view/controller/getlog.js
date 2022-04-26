@@ -7,7 +7,11 @@ async function (e) {
     if(vetcircle){
     map.removeLayer(vetcircle)
     }
-    
+    if(markers.length > 0){
+        for(var marker of markers){
+            map.removeLayer(marker)
+        }
+    }
     var circle = L.circle(e.latlng, {radius:95})
     circle.addTo(map)
     
@@ -29,7 +33,12 @@ async function vectormarket(){
             map.removeLayer(marker)
         }
     }
+    console.log(points)
     const value = points[slider.value]
     const marker2 =L.marker([value[0],value[1]]).addTo(map)
+    fechapoint = moment(value[2]).format('YYYY:MM:DD HH:mm:ss')
+    marker2.bindPopup("fecha: "+fechapoint).openPopup();
     markers.push(marker2)
+
+
 }
