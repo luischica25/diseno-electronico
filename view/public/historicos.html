@@ -24,7 +24,6 @@
             <div class="logo-container">
                 <img src="../view/public/Taxilog_png.png" alt="Logo">
             </div>
-             
             <input type="datetime-local" name="finicial" id="finicial" class="finicial" onchange="rangoi(this)">
             <input type="datetime-local" name="ffinal" id="ffinal" class="ffinal" onchange='rangof(this)'> 
             <input type="range" name="slider" id="slider" onchange="vectormarket()">
@@ -43,6 +42,7 @@
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
 <script> 
+    
     var valorfinal, valorinicial
     var map = L.map('map').setView([10.989179, -74.809788], 13);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {

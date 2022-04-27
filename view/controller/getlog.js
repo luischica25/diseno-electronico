@@ -1,6 +1,7 @@
 var vetcircle
 var markers = new Array() 
 var points = new Array()
+
 map.on('click',
 async function (e) {
     points=[]
@@ -12,8 +13,12 @@ async function (e) {
             map.removeLayer(marker)
         }
     }
+
+    
     var circle = L.circle(e.latlng, {radius:95})
-    circle.addTo(map)
+    if(circondicional){
+    circle.addTo(map)}
+    
     
     vetcircle = circle
 

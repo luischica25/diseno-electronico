@@ -12,7 +12,7 @@ body {
     width: 100vw;
 }
 html{
-    background-color: #e4ee5f;
+    background-color: #000000;
     font-family: 'Roboto Mono', monospace;
     font-size: 17px;
 
@@ -52,8 +52,10 @@ html{
     height: 50%;
     
     background-color: white;
-    border: 2px solid gray;
-    border-radius: 10px;
+    border: 2px solid rgba(255, 252, 252, 0.226);
+    border-radius: 30px;
+    box-shadow:5px 5px rgba(0, 0, 0, 0.514); 
+    
 
     display: grid;
     grid-template-rows: 1fr 0.5fr 0.5fr;
@@ -61,7 +63,12 @@ html{
     opacity: 0.3;
 
     transition-property: opacity;
-    transition-duration: 300ms;
+    transition-duration: 500ms;
+    
+}
+.info-table:hover{
+    opacity: 1;
+
 }
 
 .logo-container {
@@ -107,17 +114,20 @@ html{
     font-weight: 300;
 }
 .historics{
-    background-color: #b5bd49;
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.2fr 0.2fr 0.1fr 0.1fr;
 }
-.info-table:hover{
-    opacity: 0.8;
-}
 
 .historics input {
-    height: 30px;
+    border-radius: 30px;
+    height: 32px;  
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color:#ebe9e9e7;
+    border-color: #ffffff;  
 }
+
+
 
 .historics .logo-container {
     grid-column: 1/2;
@@ -125,6 +135,7 @@ html{
 }
 
 .historics .finicial {
+
     grid-column: 1/2;
     grid-row: 2/3;
 }
@@ -134,12 +145,15 @@ html{
     grid-row: 3/4;
 }
 
-.historics .slider {
-    grid-column: 1/2;
-    grid-row: 4/5;
-}
+
 
 .historics .search {
+    margin-left: 30% ; 
+    margin-right: 30% ;
+    border: #ffffff;
+    border-radius: 10px;       
     grid-column: 1/2;
     grid-row: 5/6;
+    color: #fff;
+    background: color #fcac1c;;
 }

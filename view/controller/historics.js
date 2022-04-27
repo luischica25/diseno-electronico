@@ -3,6 +3,7 @@ var forRange = new Array()
 var markers = new Array()
 var poliArray = new Array()
 var coords = new Array()
+var circondicional = false
 const histLat = document.querySelector('.latitud')
 const histLng = document.querySelector('.longitud')
 const histTs = document.querySelector('.timestamp')
@@ -25,6 +26,7 @@ async function getHistorics(){
 }
 
 async function drawHistorics(){
+    circondicional=true
     for(var marker of markers){
         map.removeLayer(marker)   
        }
