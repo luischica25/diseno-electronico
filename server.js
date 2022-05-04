@@ -34,15 +34,15 @@ let server = new dgram.createSocket('udp4')
 server.on('error',(error)=>{
     console.log('Ha habido un error en el servidor',error)
 })
-var lat,long,fecha,hora
+var lat,long,timestamp,ntaxi,rpm
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
     console.log(msg)
     msgSplited = msg.split(' ')
-    if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3]){
-        lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2]+' '+msgSplited[3]
-        query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,timestamp)
-        VALUES(UUID(),'${lat}','${long}','${timestamp}') `
+    if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3] && msgSplited[4]){
+        lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2] , ntaxi = msgSplited[3], rpm = msgSplited[4] 
+        query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,timestamp,ntaxi,rpm)
+        VALUES(UUID(),'${lat}','${long}','${timestamp}','${ntaxi}','${rpm}') `
         connection.query(query,(e,d)=>{
             if(e)throw e
         })
@@ -51,13 +51,12 @@ server.on('message',(msg,msgInfo)=>{
     }
 
 })
-
 server.bind(40001)
 /**Servidor HTTP de solicitudes por parte de el frontend */
 
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
-    query = `SELECT latitud,longitud,timestamp
+    query = `SELECT latitud,longitud,timestamp,ntaxi,rpm
     FROM geolocalizacion
     ORDER BY timestamp
     DESC
@@ -85,7 +84,7 @@ app.post('/historicos', async(req,res)=>{
     idate = new Date(idate), fdate = new Date(fdate)
     idate = moment(idate).format('YYYY:MM:DD HH:mm:ss')
     fdate = moment(fdate).format('YYYY:MM:DD HH:mm:ss')
-    query = `SELECT latitud,longitud,timestamp
+    query = `SELECT latitud,longitud,timestamp,ntaxi,rpm
     FROM geolocalizacion
     WHERE timestamp BETWEEN '${idate}' AND '${fdate}'
     ORDER BY timestamp asc`

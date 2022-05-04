@@ -1,7 +1,8 @@
 var vetcircle
 var markers = new Array() 
 var points = new Array()
-
+//Eso está malo
+//Not responding
 map.on('click',
 async function (e) {
     points=[]
