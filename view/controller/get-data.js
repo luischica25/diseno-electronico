@@ -1,12 +1,14 @@
-
 let coordenadas = new Array()
 let coordenadas2 = new Array()
 var actualPolyline2 
 var actualPolyline
+var actualMarket
+var actualMarket2
 async function getData(){
     let data = await fetch('/data')
-    if(!data.ok) throw data.status
-    data = data.json()
+    if(!data.ok) {throw data.status}
+    //data = await data.json()
+    return await data.json()
     return data
 }
 let latitud = 0 ,longitud = 0
@@ -15,44 +17,80 @@ let markerArray2 = new Array()
 setInterval(async ()=>{
     let data = await getData();
     let taxi1Position = data.response[0]
+    console.log (data)
+    
+    
+    
+    
     let taxi2Position = data.response[1]
+   
+    
     let response = setDataIntDoc(taxi1Position)
     coordenadas.push(response)
-    if(L.marker!==undefined){
-        map.removeLayer(L.marker)
+   
+    
+    
+    if (actualMarket) actualMarket.setLatLng([taxi1Position.latitud,taxi1Position.longitud])
+    else{
+        actualMarket = L.marker([taxi1Position.latitud,taxi1Position.longitud])
+        actualMarket.addTo(map)
     }
-    const actualMarket = new L.marker([response[0],response[1]]).addTo(map)
-    response = setDataIntDoc(taxi2Position)
-    coordenadas2.push(response)
-    const actualMarket2 = new L.marker([response[0],response[1]]).addTo(map)
-    markerArray.push(actualMarket)
-    markerArray2.push(actualMarket2)
-    deleteMarkers(markerArray)
-    deleteMarkers(markerArray2)
-     map.deletelayer(actualPolyline)
-     map.deletelayer(actualPolyline2)
-     actualpolyline = new L.polyline(coordenadas).addTo(map);
-     actualPolyline2 = new L.polyline(coordenadas2).addTo(map)
+    if (actualMarket2) actualMarket2.setLatLng([taxi2Position.latitud,taxi2Position.longitud])
+    else{
+        actualMarket2 = L.marker([taxi2Position.latitud,taxi2Position.longitud])
+        actualMarket2.addTo(map)
+    }
+
+    //if(L.marker!==undefined){
+    //    map.removeLayer(L.marker)
+    //}
+    //actualMarket = new L.marker([response[0],response[1]]).addTo(map)
+    response2 = setDataIntDoc(taxi2Position)
+    coordenadas2.push(response2)
+    if(actualPolyline) actualPolyline.setLatLngs(coordenadas)
+    else {
+        actualPolyline = L.polyline(coordenadas)
+        actualPolyline.addTo(map)
+    }
+    if(actualPolyline2) actualPolyline2.setLatLngs(coordenadas2)
+    else {
+        actualPolyline2 = L.polyline(coordenadas2)
+        actualPolyline2.addTo(map)
+    }
+    //actualpolyline = new L.polyline(coordenadas).addTo(map);
+    //actualPolyline2 = new L.polyline(coordenadas2).addTo(map)
     
 
 
 },4000)
-const taxi1 = document.querySelector('#tax1')
-taxi1.addEventListener('clic',function(e) {
-    e.preventDefault()
-    deleteMarkers(actualMarket2)
-    deleteMarkers(markerArray2)
-    map.deletelayer(actualPolyline2)
-})
-const taxi2 = document.querySelector('#tax2')
-taxi2.addEventListener('clic',function(e) {
-    e.preventDefault()
-    deleteMarkers(actualMarket)
-    deleteMarkers(markerArray)
-    map.deletelayer(actualPolyline)
-})
 
+const taxis = document.getElementById('taxis')
+taxis.addEventListener('change', (e) =>{
+    e.preventDefault()
+    switch(e.target.value){
+        case 'taxi1':
+            actualMarket2.setOpacity(0)
+            actualMarket.setOpacity(1)
+            actualPolyline.setStyle({opacity: 1})
+            actualPolyline2.setStyle({opacity: 0})
 
+            
+            break
+        case 'taxi2':
+            actualMarket.setOpacity(0)
+            actualMarket.setOpacity(1)
+            actualPolyline.setStyle({opacity: 0})
+            actualPolyline2.setStyle({opacity: 1})
+            break
+        case 'ambos':
+            actualMarket.setOpacity(1)
+            actualMarket.setOpacity(1)  
+            actualPolyline.setStyle({opacity: 1})
+            actualPolyline2.setStyle({opacity: 1})    
+
+        
+    }
+})
 
 
 function deleteMarkers (markers){

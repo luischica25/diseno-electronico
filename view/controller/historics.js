@@ -55,7 +55,8 @@ async function drawHistorics(){
     
     }
     var polyline1 = L.polyline(coords1).addTo(map);
-    polyline1.options.color = red
+
+   
     poliArray1.push(polyline1)
 
     var polyline2 = L.polyline(coords2).addTo(map);

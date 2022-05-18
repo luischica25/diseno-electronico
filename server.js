@@ -40,7 +40,7 @@ server.on('message',(msg,msgInfo)=>{
     console.log(msg)
     msgSplited = msg.split('%')
    
-    if(msgSplited[0] && msgSplited[1] && msgSplitpaed[2] && msgSplited[3] && msgSplited[4]){
+    if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3] && msgSplited[4]){
         lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2] , ntaxi = msgSplited[3], rpm = msgSplited[4] 
         query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,timestamp,ntaxi,rpm)
         VALUES(UUID(),'${lat}','${long}','${timestamp}','${ntaxi}','${rpm}') `
@@ -86,7 +86,7 @@ app.get('/data',async (req,res)=>{
             }
         })
     })
-    console.log(response)
+    
     res.status(200).json({
         response
     })
