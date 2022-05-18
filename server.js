@@ -38,7 +38,7 @@ var lat,long,timestamp,ntaxi,rpm
 server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
     console.log(msg)
-    msgSplited = msg.split(' ')
+    msgSplited = msg.split('%')
    
     if(msgSplited[0] && msgSplited[1] && msgSplitpaed[2] && msgSplited[3] && msgSplited[4]){
         lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2] , ntaxi = msgSplited[3], rpm = msgSplited[4] 

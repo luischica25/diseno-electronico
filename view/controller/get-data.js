@@ -1,8 +1,8 @@
 
 let coordenadas = new Array()
 let coordenadas2 = new Array()
-let actualPolyline2 
-let actualPolyline
+var actualPolyline2 
+var actualPolyline
 async function getData(){
     let data = await fetch('/data')
     if(!data.ok) throw data.status
@@ -40,11 +40,15 @@ setInterval(async ()=>{
 const taxi1 = document.querySelector('#tax1')
 taxi1.addEventListener('clic',function(e) {
     e.preventDefault()
+    deleteMarkers(actualMarket2)
+    deleteMarkers(markerArray2)
     map.deletelayer(actualPolyline2)
 })
 const taxi2 = document.querySelector('#tax2')
 taxi2.addEventListener('clic',function(e) {
     e.preventDefault()
+    deleteMarkers(actualMarket)
+    deleteMarkers(markerArray)
     map.deletelayer(actualPolyline)
 })
 
