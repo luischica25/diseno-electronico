@@ -39,7 +39,8 @@ server.on('message',(msg,msgInfo)=>{
     msg = msg.toString()
     console.log(msg)
     msgSplited = msg.split(' ')
-    if(msgSplited[0] && msgSplited[1] && msgSplited[2] && msgSplited[3] && msgSplited[4]){
+   
+    if(msgSplited[0] && msgSplited[1] && msgSplitpaed[2] && msgSplited[3] && msgSplited[4]){
         lat = msgSplited[0], long = msgSplited[1], timestamp = msgSplited[2] , ntaxi = msgSplited[3], rpm = msgSplited[4] 
         query = `INSERT INTO geolocalizacion (id_geolocalizacion,latitud,longitud,timestamp,ntaxi,rpm)
         VALUES(UUID(),'${lat}','${long}','${timestamp}','${ntaxi}','${rpm}') `
@@ -56,20 +57,36 @@ server.bind(40001)
 
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
-    query = `SELECT latitud,longitud,timestamp,ntaxi,rpm
-    FROM geolocalizacion
-    ORDER BY timestamp
-    DESC
-    LIMIT 1`
-    var response = new Array()
-    response = await new Promise((resolve,reject)=>{
+    const query = `SELECT latitud,longitud,timestamp
+        FROM geolocalizacion 
+        WHERE ntaxi = '1'
+        ORDER BY TIMESTAMP
+        DESC 
+        LIMIT 1`
+    let response = new Array()
+    await new Promise((resolve,reject)=>{
         connection.query(query,(e,d)=>{
             if(e)throw e
             else{
-                resolve(d[0])
+                resolve(response.push(d[0]))
             }
         })
     })
+    const query2 = `SELECT latitud,longitud,timestamp
+    FROM geolocalizacion 
+    WHERE ntaxi = '2'
+    ORDER BY TIMESTAMP
+    DESC 
+    LIMIT 1`
+    await new Promise((resolve,reject)=>{
+        connection.query(query2,(e,d)=>{
+            if(e)throw e
+            else{
+                resolve(response.push(d[0]))
+            }
+        })
+    })
+    console.log(response)
     res.status(200).json({
         response
     })

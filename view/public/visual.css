@@ -157,3 +157,8 @@ html{
     color: #fff;
     background-color: #feac1d;
 }
+
+.inactive {
+    opacity: 0 important;
+
+}
