@@ -4,6 +4,7 @@ var actualPolyline2
 var actualPolyline
 var actualMarket
 var actualMarket2
+
 async function getData(){
     let data = await fetch('/data')
     if(!data.ok) {throw data.status}

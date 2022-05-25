@@ -50,7 +50,6 @@ async function (e) {
         var corar
         for(var coord of coords2a){
             corar=([coord[0],coord[1],coord[2]])
-           coordarreglo = coord.getLatLng();
          var isInCircleRadius = Math.abs(circleCenterPoint.distanceTo(corar)) <= 200
             if  (isInCircleRadius){ 
             points.push(coord)
