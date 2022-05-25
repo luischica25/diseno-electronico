@@ -5,6 +5,8 @@ var poliArray1 = new Array()
 var poliArray2 = new Array()
 var coords1 = new Array()
 var coords2 = new Array()
+var coords1a = new Array()
+var coords2a = new Array()
 
 var circondicional = false
 const histLat = document.querySelector('.latitud')
@@ -28,6 +30,8 @@ async function getHistorics(){
     return data = data.json()
 }
 
+
+
 async function drawHistorics(){
     circondicional=true
     for(var marker of markers){
@@ -40,6 +44,8 @@ async function drawHistorics(){
     data = data.response
     coords1 = []
     coords2 = []
+    coords1a = []
+    coords2a = []
     forRange = []
     poliArray1 = []
     poliArray2 = []
@@ -47,19 +53,22 @@ async function drawHistorics(){
     
     for(var coord of data){
        if(coord.ntaxi==1){
-        coords1.push([coord.latitud,coord.longitud,coord.timestamp])    
+        coords1.push([coord.latitud,coord.longitud,coord.timestamp]) 
+        coords1a.push([coord.latitud,coord.longitud,coord.timestamp,coord.rpm])    
        }
        if(coord.ntaxi==2){
-        coords2.push([coord.latitud,coord.longitud,coord.timestamp])
+        coords2.push([coord.latitud,coord.longitud,coord.timestamp]) 
+        coords2a.push([coord.latitud,coord.longitud,coord.timestamp,coord.rpm]) 
        }
     
     }
     var polyline1 = L.polyline(coords1).addTo(map);
 
-   
+    
     poliArray1.push(polyline1)
 
-    var polyline2 = L.polyline(coords2).addTo(map);
+    var polyline2 = L.polyline(coords2,{color: 'red'}).addTo(map);
+        
     poliArray2.push(polyline2)
 
 }
@@ -72,3 +81,5 @@ function deletePrev(){
         map.removeLayer(pol)
     }
 }
+
+

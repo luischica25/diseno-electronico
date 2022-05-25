@@ -57,7 +57,7 @@ server.bind(40001)
 
 app.use(express.static(__dirname+''))
 app.get('/data',async (req,res)=>{
-    const query = `SELECT latitud,longitud,timestamp
+    const query = `SELECT latitud,longitud,timestamp,rpm
         FROM geolocalizacion 
         WHERE ntaxi = '1'
         ORDER BY TIMESTAMP
@@ -72,7 +72,7 @@ app.get('/data',async (req,res)=>{
             }
         })
     })
-    const query2 = `SELECT latitud,longitud,timestamp
+    const query2 = `SELECT latitud,longitud,timestamp,rpm
     FROM geolocalizacion 
     WHERE ntaxi = '2'
     ORDER BY TIMESTAMP
